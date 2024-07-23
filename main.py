@@ -102,7 +102,7 @@ rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chai
 
 ### Statefully manage chat history ###
 store = {}
-greet_msg = '반갑습니다!🖐🏻  \n  \n저는 연성대의 입시 전형 Q&A봇 쿠피입니다.  \n  \n궁금한 사항에 대해 질문해 주세요!'
+greet_msg = '반갑습니다!🖐🏻  \n  \n저는 연성대의 입시 전형 Q&A봇 사피입니다.  \n  \n궁금한 사항에 대해 질문해 주세요!'
 st.chat_message("ai").write(greet_msg)
 
 def get_session_history(session_id: str) -> StreamlitChatMessageHistory:
