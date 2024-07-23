@@ -1,0 +1,9 @@
+langchain
+langchain_openai
+streamlit
+faiss-cpu
+openai
+boto3
+langchain-aws
+langchainhub
+langchain-community
