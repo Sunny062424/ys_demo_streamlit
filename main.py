@@ -83,8 +83,15 @@ history_aware_retriever = create_history_aware_retriever(
 
 
 ### Answer question ###
-qa_system_prompt = """You are an assistant for question-answering tasks. \
+#qa_system_prompt = """You are an assistant for question-answering tasks. \
+#Use the following pieces of retrieved html formed table context to answer the question. \
+#If you don't know the answer, just say "입학전형 문서에 없는 내용입니다. 다시 질문해주세요." \
+#Answer correctly using given context.
+#{context}"""
+
+#qa_system_prompt = """You are an assistant for question-answering tasks. \
 Use the following pieces of retrieved html formed table context to answer the question. \
+Always include the metadata informaion you got in context at the end of the response you make, the format is 본 답변은 ** 페이지를 참고 했습니다. ** is metadata you got.
 If you don't know the answer, just say "입학전형 문서에 없는 내용입니다. 다시 질문해주세요." \
 Answer correctly using given context.
 {context}"""
