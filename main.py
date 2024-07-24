@@ -59,7 +59,7 @@ def load_vector_db():
     embeddings_model = BedrockEmbeddings(model_id="amazon.titan-embed-text-v1",
                                         client=bedrock_runtime)
     vectorestore = FAISS.load_local('./ysuniv_db/faiss', embeddings_model, allow_dangerous_deserialization=True )
-    retriever = vectorestore.as_retriever(search_type="mmr")
+    retriever = vectorestore.as_retriever(search_type="mmr", search_kwargs={"k": 3})
     return retriever
 
 retriever = load_vector_db()
