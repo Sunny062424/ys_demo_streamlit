@@ -41,7 +41,7 @@ model_id = "anthropic.claude-3-5-sonnet-20240620-v1:0"
 model_kwargs =  { 
     "temperature": 0.0,
     "top_k": 0,
-    "top_p": 1,
+    "top_p": 0.8,
     "stop_sequences": ["\n\nHuman"],
 }
 
